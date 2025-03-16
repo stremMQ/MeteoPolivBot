@@ -96,12 +96,12 @@ def rav(message):
         menu(message)
         rezultid = ''
     else:
-        with ps.connect(dbname='meteostancia', user='postgres', password='Erfgtyhjuiklop', host='127.0.0.1') as con:
+        with ps.connect(dbname='x', user='x', password='x', host='x') as con:
 
             con.autocommit = True
             with con.cursor() as cur:
 
-                cur.execute('''SELECT id FROM dannie WHERE id = (%s)''', (rezultid,))
+                cur.execute('''SELECT x FROM x WHERE x = (%s)''', (rezultid,))
                 if cur.fetchall() == []:
                     bot.send_message(message.chat.id,'неверный id, проверьте и попробуйте еще раз')
                     reg(message)
@@ -110,21 +110,21 @@ def rav(message):
 
 
 def inform(message):
-    with ps.connect(dbname='meteostancia', user='postgres', password='Erfgtyhjuiklop', host='127.0.0.1') as con:
+    with ps.connect(dbname='x', user='x', password='x', host='x') as con:
 
         con.autocommit = True
         with con.cursor() as cur:
-            cur.execute('''SELECT temp FROM dannie WHERE id = (%s)''', (rezultid,))
+            cur.execute('''SELECT x FROM x WHERE x = (%s)''', (rezultid,))
             result = cur.fetchall()
             for item in result:
                 temp = str(item[0])
 
-            cur.execute('''SELECT vlag FROM dannie WHERE id = (%s)''', (rezultid,))
+            cur.execute('''SELECT x FROM x WHERE x = (%s)''', (rezultid,))
             result2 = cur.fetchall()
             for item2 in result2:
                 vlag = str(item2[0])
 
-            cur.execute('''SELECT vlagP FROM dannie WHERE id = (%s)''', (rezultid,))
+            cur.execute('''SELECT x FROM x WHERE x = (%s)''', (rezultid,))
             result3 = cur.fetchall()
             for item3 in result3:
                 vlagP = str(item3[0])
