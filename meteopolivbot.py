@@ -9,7 +9,7 @@ from telebot.apihelper import send_message
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 rezultid = ''
-bot = telebot.TeleBot('7698285311:AAEiiHh3NRTuE1-a-xA4INEi3Yw1tR8vZiA')
+bot = telebot.TeleBot('')
 
 
 @bot.message_handler(commands=['start'])
